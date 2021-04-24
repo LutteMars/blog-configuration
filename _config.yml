@@ -124,8 +124,8 @@ feed:
 #disqus_shortname: https-luttemars-github-io
 
 #畅言
-changyan_appid: cysWNgenz
-changyan_conf: prod_4dbf7371eb6398cc3db686d73dbafc4c
+# changyan_appid: cysWNgenz
+# changyan_conf: prod_4dbf7371eb6398cc3db686d73dbafc4c
 
 #Content
 jsonContent:
