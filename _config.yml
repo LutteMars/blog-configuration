@@ -110,10 +110,10 @@ feed:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
- # type: git
- # repository: git@github.com:LutteMars/LutteMars.github.io.git
- # branch: master
+deploy:
+ type: git
+ repository: git@github.com:LutteMars/LutteMars.github.io.git
+ branch: master
 
 # Comment
 ## 鉴于多说官方决定在2017年6月1日关闭多说，
