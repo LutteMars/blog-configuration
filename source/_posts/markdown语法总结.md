@@ -1,14 +1,14 @@
 ---
-title: markdown语法总结
+title: MarkDown语法总结
 date: 2017-04-13 01:59:51
 tags: [脚本语言,编程,程序设计,思考总结,前端,效率]
 description: 这只是一个语言描述的测试
 ---
-
 生成目录：
-[TOC]
 
-<h2>字体
+
+###一 、字体 
+
 
 粗体字：**粗体字**
 __double underscores__
@@ -17,12 +17,14 @@ __double underscores__
 斜体字：_斜体字_
  *single asterisks*
 <em>single asterisks</em>
+
 <!--more-->
+
 > 这是Blockquotes
 
->> 这是二级
+>> 二、这是二级
 
->>> 这是三级
+>>> 三、这是三级
 
 ##水平线
 
@@ -51,7 +53,7 @@ __double underscores__
 ===================
 
 
-##着重表示
+##四、着重表示
 
 带有“\”的转义字符：
 \*literal asterisks\*
@@ -67,10 +69,20 @@ __double underscores__
 
 @(这是着重表示吗？)
 
-###`也曾醉酒鞭名马，唯恐多情累美人`
-### 
+`也曾醉酒鞭名马，唯恐多情累美人`
 
-##链接
+
+
+!!! note Hexo-admonition 插件使用示例 这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。 提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。
+
+!!! warning
+    这是一条采用默认标题的警告信息。
+    
+!!! node "嵌套链接及引用块" 欢迎访问我的博客链接：[悟尘记](https://www.lixl.cn) >这里嵌套一行引用信息。
+   
+
+
+##五、链接
 
 简单链接：See my [About](/about/) page for details. 
 
@@ -91,16 +103,45 @@ qq号码：[11112121211](qq:11112121211)
 ![Alt text](/assets/img/personalimage.jpeg)
 
 
+##表情：
+星星表情:star:
+微笑表情 :smiley: 
+
+
 范围文字说明：
 
 ##引用
 
-```
+```latex
 options space=20
 tabstave notation=true key=A time=4/4
 notes :q =|: (5/2.5/3.7/4) :8 7-5h6/3 ^3^ 5h6-7/5 ^3^ :q 7V/4 |
 notes :8 t12p7/4 s5s3/4 :8 3s:16:5-7/5 :h p5/4
 text :w, |#segno, ,|, :hd, , #tr
+```
+
+```math
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+```
+```katex
+\displaystyle
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        }
+    }
+```
+```latex
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
 ```
 ##列表
 
@@ -177,6 +218,72 @@ print "hello world"
 ```
 ```java
 import java.io.*;
+```
+
+```swift
+// Swift 语法示例
+/// Swift 语法示例
+enum Student {
+    case Name(String)
+    case Mark(Int, Int, Int)
+}
+
+var sutdDetails = Student.Name("aaa")
+var studMarks   = Student.Mark(100, 90, 88)
+
+switch studMarks {
+    case .Name(let studName):
+        print("名字是：\(studName)")
+    case .Mark(let mark1, let mark2, let mark3):
+        print("学生的成绩是：\(mark1), \(mark2), \(mark3)")
+}
+```
+
+``` Dart
+/// Flutter 语法示例
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(debugShowCheckedModeBanner: false, home: EHomePage());
+  }
+}
+
+class EHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "我的第一个Flutter程序",
+            style: TextStyle(color: Colors.red),
+          ),
+        ),
+        body: EBody());
+  }
+}
+
+class EBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Center(
+      child: Text(
+        "Hello Flutter",
+        textDirection: TextDirection.ltr,
+        style: TextStyle(fontSize: 30, color: Colors.orange),
+      ),
+    );
+  }
+}
+
 ```
 
 

@@ -116,8 +116,12 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'http://litten.me/ins-min/' + data.link[i] + '.min.jpg';
-          var src = 'http://litten.me/ins/' + data.link[i];
+          // 缩略图地址
+          // var minSrc = 'http://litten.me/ins-min/' + data.link[i] + '.min.jpg';
+          var minSrc = 'https://github.com/LutteMars/blog-configuration/tree/master/min_photos/' + data.link[i];
+          // 大图地址
+          // var src = 'http://litten.me/ins/' + data.link[i];
+          var src = 'https://github.com/LutteMars/blog-configuration/tree/master/photos/' + data.link[i];
           var type = data.type[i];
           var target = src + (type === 'video' ? '.mp4' : '.jpg');
           src += '.jpg';
@@ -169,7 +173,7 @@
     function loadData(success) {
       if (!searchData) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', './ins.json?t=' + +new Date(), true);
+        xhr.open('GET', './data.json?t=' + +new Date(), true);
 
         xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
